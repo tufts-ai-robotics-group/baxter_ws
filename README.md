@@ -45,7 +45,7 @@ and run the command:
         python data_collection.py <objectname_object_mass> <trial number>
   
 An example could be:
-        python data_collection.py blue_60g 5
+        python data_collection.py blue_60g 5 
 
 
           
