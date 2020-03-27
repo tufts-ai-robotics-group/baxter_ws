@@ -37,11 +37,9 @@ The ROS topics listened to are:
 The audio data is recorded using the 'sounddevice' Python library. The recording is started right before the robot interacts with the object and is stopped right after the robot finishes interacting with the object. By doing this, we avoid recording extraneous sounds. The audio data is typically a few seconds long.
 
 The file system for storing the data collected looks like:
--  data
-  
- -    |_ objectname_objectmass
-     
- -                  |_ robot_action_modality_objectname_objectmass_trialnumber.json
+* data
+  * objectname_objectmass
+     * robot_action_modality_objectname_objectmass_trialnumber.json
                  
                   
 The audio files end in .wav whilst the images end in .png. The other files are stored in json format for easy
@@ -51,11 +49,11 @@ To start the data collection, go to the directory that contains the data collect
 
 and run the command:
 
-        _python data_collection.py <objectname_object_mass> <trial number>
+        python data_collection.py <objectname_object_mass> <trial number>
   
 An example could be:
 
-        _python data_collection.py blue_60g 5 
+        python data_collection.py blue_60g 5 
 
 
           
