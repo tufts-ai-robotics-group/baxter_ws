@@ -25,16 +25,23 @@ The multi-modal data collected include:
 Some of these data are subscribed to through ROS topics while the others are collected in the script.
 The ROS topics listened to are:
 '/robot/accelerometer/left_accelerometer/state'  -- For accelerometer data
+----
 '/robot/limb/left/endpoint_state'                -- For state of the end-effector
+----
 '/robot/joint_states'                            -- For joint states of the robot's arm
+----
 '/camera/rgb/image_raw'                          -- For an image of the object
+----
 
 The audio data is recorded using the 'sounddevice' Python library. The recording is started right before the robot interacts with the object and is stopped right after the robot finishes interacting with the object. By doing this, we avoid recording extraneous sounds. The audio data is typically a few seconds long.
 
 The file system for storing the data collected looks like:
   data
+  ----
      |_ objectname_objectmass
+     ----
                   |_robot_action_modality_objectname_objectmass_trialnumber.json
+                  ----
                   
 The audio files end in .wav whilst the images end in .png. The other files are stored in json format for easy
 parsing
