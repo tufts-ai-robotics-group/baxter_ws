@@ -24,6 +24,7 @@ The multi-modal data collected include:
  
 Some of these data are subscribed to through ROS topics while the others are collected in the script.
 The ROS topics listened to are:
+
 -'/robot/accelerometer/left_accelerometer/state'  -- For accelerometer data
 
 -'/robot/limb/left/endpoint_state'                -- For state of the end-effector
@@ -40,7 +41,7 @@ The file system for storing the data collected looks like:
   
  -    |_ objectname_objectmass
      
- -                  |_robot_action_modality_objectname_objectmass_trialnumber.json
+ -                  |_ robot_action_modality_objectname_objectmass_trialnumber.json
                  
                   
 The audio files end in .wav whilst the images end in .png. The other files are stored in json format for easy
@@ -49,10 +50,12 @@ parsing
 To start the data collection, go to the directory that contains the data collection script: https://github.com/tufts-ai-robotics-group/baxter_ws/tree/master/src/run_scripts/src
 
 and run the command:
-        python data_collection.py <objectname_object_mass> <trial number>
+
+        _python data_collection.py <objectname_object_mass> <trial number>
   
 An example could be:
-        python data_collection.py blue_60g 5 
+
+        _python data_collection.py blue_60g 5 
 
 
           
