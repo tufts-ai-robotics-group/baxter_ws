@@ -16,6 +16,7 @@ There are 5 exploratory behaviors implemented. These are the
 
 Running the data collection script sequentially performs each of these actions on the object, all the while collecting data.
 The multi-modal data collected include:
+
  a. Sound produced during the object interaction
  
  b. Image of the object
